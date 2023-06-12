@@ -1,12 +1,77 @@
-:root{
+:root {
     --background-color: #6d6c81;
+    --border-color: white;
 }
+
 *{
     background-color: var(--background-color);
     font-family:'Times New Roman', Times, serif;
+    font-size: 20px;
 }
 
 header {
-    display: block;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
     background-color: #163a59;
+    border: 10px;
+    border-style: solid;
+    padding: 10px;
+}
+
+header h1 {
+    font-size: 100px;
+    background-color: #163a59;
+}
+
+header nav{
+    background-color: #163a59;
+    flex-direction: row;
+    color: black;
+    padding: 10px;
+}
+
+main {
+   padding: 2%;
+}
+.about-me-section {
+    display: flex;
+    flex-wrap: wrap;
+    border: 10px;
+    border-color: var(--border-color);
+}
+.about-me-section h1{
+    font-size: 50px;
+}
+.about-me-section img {
+    width: 500px;
+}
+.about-me-section:hover {
+
+}
+.main-project {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 600px;
+    padding: 20px;
+}
+.main-project:hover {
+    
+}
+
+.smaller-project {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+ .smaller-project h2{
+    font-size: 50px;
+    text-align: center;
+ }
+
+.bottom-center {
+    
 }
