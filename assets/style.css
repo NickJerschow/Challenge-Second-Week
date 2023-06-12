@@ -1,12 +1,15 @@
 :root {
     --background-color: #6d6c81;
-    --border-color: white;
+    --border-color: black;
+    --section-blackground-color:#163a59;
+    --border-size: 10px;
 }
 
 *{
     background-color: var(--background-color);
     font-family:'Times New Roman', Times, serif;
     font-size: 20px;
+    padding: 1%;
 }
 
 header {
@@ -14,49 +17,66 @@ header {
     flex-wrap: wrap;
     justify-content: space-between;
     background-color: #163a59;
-    border: 10px;
+    border: var(--border-size);
     border-style: solid;
     padding: 10px;
 }
 
 header h1 {
     font-size: 100px;
-    background-color: #163a59;
+    background-color: var(--section-background-color);
 }
 
-header nav{
-    background-color: #163a59;
-    flex-direction: row;
+header nav {
+    background-color: var(--section-background-color);
+    display: flex;
     color: black;
     padding: 10px;
 }
 
 main {
-   padding: 2%;
+    padding: 1%;
 }
+
 .about-me-section {
+    border: var(--border-size) solid;
+    border-color: var(--border-color);
+    padding: 2%;
+}
+
+.about-me-section h1 {
+    font-size: 50px;
+    justify-content: center;
+}
+
+.about-me-section div {
     display: flex;
     flex-wrap: wrap;
-    border: 10px;
-    border-color: var(--border-color);
 }
-.about-me-section h1{
-    font-size: 50px;
-}
+
 .about-me-section img {
-    width: 500px;
+    width: 50%;
+    justify-content: left;
 }
+
+.about-me-section p {
+
+}
+
 .about-me-section:hover {
 
 }
+
 .main-project {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    width: 600px;
+    width: 100%;
     padding: 20px;
+    border: var(--border-size) solid;
 }
+
 .main-project:hover {
     
 }
@@ -66,12 +86,29 @@ main {
     justify-content: space-evenly;
     flex-wrap: wrap;
     padding: 20px;
+    border: var(--border-size) solid;
 }
  .smaller-project h2{
     font-size: 50px;
     text-align: center;
  }
 
-.bottom-center {
-    
+footer {
+    padding: 2%;
+    border: var(--border-size) solid;
+
+}
+
+ footer h1 {
+    display: flex;
+    justify-content: center;
+ }
+
+footer ul {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+@media screen and (max-width: 992px) {
+       
 }
