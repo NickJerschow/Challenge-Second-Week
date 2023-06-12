@@ -3,6 +3,8 @@
     --border-color: black;
     --section-blackground-color:#163a59;
     --border-size: 10px;
+    --section-heading-font-size: 50px;
+    --hover-color:#163a59;
 }
 
 *{
@@ -29,24 +31,26 @@ header h1 {
 
 header nav {
     background-color: var(--section-background-color);
-    display: flex;
+    display: inline-block;
+    float: right;
     color: black;
     padding: 10px;
 }
 
 main {
+    margin: 1%;
     padding: 1%;
 }
 
 .about-me-section {
     border: var(--border-size) solid;
     border-color: var(--border-color);
-    padding: 2%;
 }
 
 .about-me-section h1 {
-    font-size: 50px;
+    font-size: var(--section-heading-font-size);
     justify-content: center;
+    background-color: var(--section-blackground-color);
 }
 
 .about-me-section div {
@@ -56,7 +60,7 @@ main {
 
 .about-me-section img {
     width: 50%;
-    justify-content: left;
+    justify-content: center;
 }
 
 .about-me-section p {
@@ -64,7 +68,7 @@ main {
 }
 
 .about-me-section:hover {
-
+    background-color: var(--section-blackground-color);
 }
 
 .main-project {
@@ -78,37 +82,54 @@ main {
 }
 
 .main-project:hover {
-    
+    background-color: var(--section-blackground-color);
+}
+
+.main-project h1{
+    font-size: var(--section-heading-font-size);
+    background-color: var(--section-blackground-color);
 }
 
 .smaller-project {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     flex-wrap: wrap;
     padding: 20px;
     border: var(--border-size) solid;
 }
- .smaller-project h2{
+
+.smaller-project h2 {
     font-size: 50px;
     text-align: center;
  }
 
+ .project-card:hover {
+    background-color: var(--section-blackground-color);
+    color: var(--hover-color);
+ }
 footer {
     padding: 2%;
     border: var(--border-size) solid;
+    background-color: var(--section-blackground-color);
 
 }
 
  footer h1 {
+    font-size: var(--section-heading-font-size);
     display: flex;
     justify-content: center;
+    background-color: var(--section-blackground-color);
  }
 
 footer ul {
     display: flex;
     justify-content: space-evenly;
+    background-color: var(--section-blackground-color);
 }
 
-@media screen and (max-width: 992px) {
-       
+@media screen and (max-width: 992px) { /*makes the nav and main sections form into columns when the screen is smaller than 992px*/
+     main,
+     nav {
+        flex-direction: column;
+     }  
 }
