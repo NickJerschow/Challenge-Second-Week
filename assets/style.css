@@ -1,7 +1,12 @@
 :root{
-    --background-color: #163a59;
+    --background-color: #6d6c81;
 }
 *{
     background-color: var(--background-color);
     font-family:'Times New Roman', Times, serif;
+}
+
+header {
+    display: block;
+    background-color: #163a59;
 }
