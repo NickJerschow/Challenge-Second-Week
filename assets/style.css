@@ -1,4 +1,4 @@
-:root {
+:root { /*stored properties that are repeated through the css*/
     --background-color: #6d6c81;
     --border-color: black;
     --section-blackground-color:#163a59;
@@ -7,17 +7,16 @@
     --hover-color:#163a59;
 }
 
-*{
+*{ /*properties applied to the whole page*/
     background-color: var(--background-color);
     font-family:'Times New Roman', Times, serif;
     font-size: 20px;
-    padding: 1%;
 }
 
 header {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-evenly;
     background-color: #163a59;
     border: var(--border-size);
     border-style: solid;
@@ -29,28 +28,30 @@ header h1 {
     background-color: var(--section-background-color);
 }
 
-header nav {
+nav {
     background-color: var(--section-background-color);
-    display: inline-block;
-    float: right;
-    color: black;
     padding: 10px;
 }
 
-main {
-    margin: 1%;
-    padding: 1%;
+nav ul {
+    display: flex;
+    justify-content: space-evenly;
 }
 
+main {
+    margin: 20px;
+}
 .about-me-section {
+    display: flex;
     border: var(--border-size) solid;
     border-color: var(--border-color);
+    margin-bottom: 10px;
 }
 
 .about-me-section h1 {
     font-size: var(--section-heading-font-size);
-    justify-content: center;
     background-color: var(--section-blackground-color);
+    padding: 1%;
 }
 
 .about-me-section div {
@@ -60,53 +61,53 @@ main {
 
 .about-me-section img {
     width: 50%;
-    justify-content: center;
+    border: var(--section-blackground-color) solid 10px;
 }
 
 .about-me-section p {
-
+    width: 50%;
+    font-size: 40px;
+    padding: 10%;
 }
 
-.about-me-section:hover {
-    background-color: var(--section-blackground-color);
-}
 
 .main-project {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    padding: 20px;
     border: var(--border-size) solid;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
-.main-project:hover {
-    background-color: var(--section-blackground-color);
-}
-
-.main-project h1{
+.main-project h1 {
+    padding: 1%;
     font-size: var(--section-heading-font-size);
     background-color: var(--section-blackground-color);
+}
+.main-project img {
+    margin: 2% 0 2% 10%;
 }
 
 .smaller-project {
     display: flex;
-    justify-content: space-around;
     flex-wrap: wrap;
     padding: 20px;
     border: var(--border-size) solid;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.smaller-project h1 {
+    display: flex;
+    ;
+    font-size: var(--section-heading-font-size);
+    background-color: var(--section-blackground-color);
 }
 
 .smaller-project h2 {
-    font-size: 50px;
+    font-size: 30px;
     text-align: center;
  }
 
- .project-card:hover {
-    background-color: var(--section-blackground-color);
-    color: var(--hover-color);
- }
 footer {
     padding: 2%;
     border: var(--border-size) solid;
@@ -119,12 +120,13 @@ footer {
     display: flex;
     justify-content: center;
     background-color: var(--section-blackground-color);
- }
+}
 
 footer ul {
     display: flex;
     justify-content: space-evenly;
     background-color: var(--section-blackground-color);
+    margin-top: 10px;
 }
 
 @media screen and (max-width: 992px) { /*makes the nav and main sections form into columns when the screen is smaller than 992px*/
